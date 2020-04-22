@@ -1103,6 +1103,7 @@ surf_unmap_rgb(PyObject *self, PyObject *arg)
     SDL_Surface *surf = pgSurface_AsSurface(self);
     Uint32 col;
     Uint8 rgba[4];
+    rgba = 0;
 
     col = (Uint32)PyInt_AsLong(arg);
     if (col == (Uint32)-1 && PyErr_Occurred()) {
@@ -1496,6 +1497,7 @@ surf_get_colorkey(PyObject *self, PyObject *args)
 #else  /* IS_SDLv2 */
     Uint32 mapped_color;
     Uint8 r, g, b, a = 255;
+    b = 0;
 #endif /* IS_SDLv2 */
 
     if (!surf)
@@ -1698,6 +1700,7 @@ surf_convert(PyObject *self, PyObject *args)
 #if IS_SDLv2
     Uint32 colorkey;
     Uint8 key_r, key_g, key_b, key_a = 255;
+    key_b = 0;
     int has_colorkey = SDL_FALSE;
 
 #endif /* IS_SDLv2 */
@@ -2962,6 +2965,7 @@ surf_get_bounding_rect(PyObject *self, PyObject *args, PyObject *kwargs)
     PyObject *rect;
     SDL_Surface *surf = pgSurface_AsSurface(self);
     SDL_PixelFormat *format = NULL;
+    b = 0;
     Uint8 *pixels = NULL;
     Uint8 *pixel;
     int x, y;
