@@ -2213,6 +2213,7 @@ alphablit_alpha (SDL_BlitInfo * info)
     int             dR, dG, dB, dA, sR, sG, sB, sA;
 #else /* IS_SDLv2 */
     Uint8           dR, dG, dB, dA, sR, sG, sB, sA;
+    dA = 0;
     int             dRi, dGi, dBi, dAi, sRi, sGi, sBi, sAi;
 #endif /* IS_SDLv2 */
     Uint32          pixel;
@@ -2388,6 +2389,7 @@ alphablit_colorkey (SDL_BlitInfo * info)
     Uint32          colorkey = srcfmt->colorkey;
 #else /* IS_SDLv2 */
     Uint8           dR, dG, dB, dA, sR, sG, sB, sA;
+    dA = 0;
     int             dRi, dGi, dBi, dAi, sRi, sGi, sBi, sAi;
     int             alpha = info->src_blanket_alpha;
     Uint32          colorkey = info->src_colorkey;
@@ -2623,6 +2625,7 @@ alphablit_solid (SDL_BlitInfo * info)
     int             alpha = srcfmt->alpha;
 #else /* IS_SDLv2 */
     Uint8           dR, dG, dB, dA, sR, sG, sB, sA;
+    dA = 0;
     int             dRi, dGi, dBi, dAi, sRi, sGi, sBi;
     int             alpha = info->src_blanket_alpha;
 #endif /* IS_SDLv2 */
