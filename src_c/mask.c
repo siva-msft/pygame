@@ -708,6 +708,7 @@ set_from_threshold(SDL_Surface *surf, bitmask_t *bitmask, int threshold)
     Uint8 bpp = format->BytesPerPixel;
     Uint8 *pixel = NULL;
     Uint8 rgba[4];
+    rgba = 0;
     int x, y;
 
     for (y = 0; y < surf->h; ++y) {
@@ -843,7 +844,9 @@ bitmask_threshold(bitmask_t *m, SDL_Surface *surf, SDL_Surface *surf2,
     Uint32 the_color, the_color2, rmask, gmask, bmask, rmask2, gmask2, bmask2;
     Uint8 *pix;
     Uint8 r, g, b, a;
+    b = 0;
     Uint8 tr, tg, tb, ta;
+    tb = 0;
     int bpp1, bpp2;
 
     format = surf->format;
