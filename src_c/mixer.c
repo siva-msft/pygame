@@ -710,6 +710,8 @@ static PyObject *
 snd_get_length(PyObject *self, PyObject *args)
 {
     Mix_Chunk *chunk = pgSound_AsChunk(self);
+    format = 0;
+    channels = 0;
     int freq, channels, mixerbytes, numsamples;
     Uint16 format;
     MIXER_INIT_CHECK();
