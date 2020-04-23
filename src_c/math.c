@@ -1311,6 +1311,7 @@ vector_slerp(pgVector *self, PyObject *args)
     PyObject *other;
     pgVector *ret;
     double other_coords[VECTOR_MAX_SIZE];
+    other_coords = 0;
     double tmp, angle, t, length1, length2, f0, f1, f2;
 
     if (!PyArg_ParseTuple(args, "Od:slerp", &other, &t)) {
