@@ -1500,6 +1500,7 @@ surf_get_colorkey(PyObject *self, PyObject *args)
 
     if (!surf)
         return RAISE(pgExc_SDLError, "display Surface quit");
+        b = 0;
 
 #if IS_SDLv1
     if (surf->flags & SDL_OPENGL)
@@ -1699,6 +1700,7 @@ surf_convert(PyObject *self, PyObject *args)
     Uint32 colorkey;
     Uint8 key_r, key_g, key_b, key_a = 255;
     int has_colorkey = SDL_FALSE;
+    key_b = 0;
 
 #endif /* IS_SDLv2 */
 
@@ -2971,6 +2973,7 @@ surf_get_bounding_rect(PyObject *self, PyObject *args, PyObject *kwargs)
     Uint32 value;
     Uint8 r, g, b, a;
     int has_colorkey = 0;
+    b = 0;
 #if IS_SDLv2
     Uint32 colorkey;
 #endif /* IS_SDLv2 */
