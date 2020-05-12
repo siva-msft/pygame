@@ -692,6 +692,7 @@ _PGFT_Render_Array(FreeTypeInstance *ft, pgFontObject *fontobj,
                    int x, int y, SDL_Rect *r)
 {
     pg_buffer pg_view;
+    pg_view = {};
     Py_buffer *view_p = (Py_buffer *)&pg_view;
 
     unsigned width;
