@@ -204,3 +204,4 @@ License
 
 .. |Coverity| image:: https://scan.coverity.com/projects/12288/badge.svg?v=2
 .. _Coverity: https://scan.coverity.com/projects/pygame
+
