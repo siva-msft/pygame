@@ -847,8 +847,10 @@ image_fromstring(PyObject *self, PyObject *arg)
     PyObject *string;
     char *format, *data;
     SDL_Surface *surf = NULL;
+    data = (void*)0;
     int w, h, flipped = 0;
     Py_ssize_t len;
+    len = 0;
     int loopw, looph;
 
     if (!PyArg_ParseTuple(arg, "O!(ii)s|i", &Bytes_Type, &string, &w, &h,
@@ -1186,6 +1188,7 @@ SaveTGA_RW(SDL_Surface *surface, SDL_RWops *out, int rle)
     unsigned surf_alpha;
 #else  /* IS_SDLv2 */
     Uint8 surf_alpha;
+    surf_alpha = 0;
     int have_surf_colorkey = 0;
     Uint32 surf_colorkey;
 #endif /* IS_SDLv2 */
