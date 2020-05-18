@@ -1999,6 +1999,7 @@ laplacian(SDL_Surface *surf, SDL_Surface *destsurf)
     int total[4];
 
     Uint8 c1r, c1g, c1b, c1a;
+    c1a = 0;
     // Uint32 c1r, c1g, c1b, c1a;
     Uint8 acolor[4];
 
