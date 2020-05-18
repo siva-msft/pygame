@@ -482,6 +482,7 @@ array_to_surface(PyObject *self, PyObject *arg)
 {
     PyObject *surfobj, *arrayobj;
     pg_buffer pg_view;
+    pg_view = {};
     Py_buffer *view_p = (Py_buffer *)&pg_view;
     char *array_data;
     SDL_Surface *surf;
@@ -776,6 +777,7 @@ surface_to_array(PyObject *self, PyObject *args, PyObject *kwds)
     PyObject *arrayobj;
     PyObject *surfobj;
     pg_buffer pg_view;
+    pg_view = {};
     Py_buffer *view_p = (Py_buffer *)&pg_view;
     _pc_view_kind_t view_kind = VIEWKIND_RGB;
     Uint8 opaque = 255;
@@ -857,6 +859,7 @@ map_array(PyObject *self, PyObject *args)
     PyObject *format_surf;
     SDL_PixelFormat *format;
     pg_buffer src_pg_view;
+    src_pg_view = {};
     Py_buffer *src_view_p = 0;
     Uint8 *src;
     int src_ndim;
@@ -865,6 +868,7 @@ map_array(PyObject *self, PyObject *args)
     int src_green;
     int src_blue;
     pg_buffer tar_pg_view;
+    tar_pg_view = {};
     Py_buffer *tar_view_p = 0;
     Uint8 *tar;
     int ndim;
@@ -1140,6 +1144,7 @@ static PyObject *
 make_surface(PyObject *self, PyObject *arg)
 {
     pg_buffer pg_view;
+    pg_view = {};
     Py_buffer *view_p = (Py_buffer *)&pg_view;
     PyObject *surfobj;
     PyObject *args;
