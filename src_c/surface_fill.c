@@ -556,6 +556,7 @@ surface_fill_blend_rgba_add(SDL_Surface *surface, SDL_Rect *rect, Uint32 color)
     int n;
     SDL_PixelFormat *fmt = surface->format;
     Uint8 sR, sG, sB, sA, cR, cG, cB, cA;
+    cA = 0;
     Uint32 pixel;
     Uint32 tmp;
     int result = -1;
@@ -633,6 +634,7 @@ surface_fill_blend_rgba_sub(SDL_Surface *surface, SDL_Rect *rect, Uint32 color)
     int n;
     SDL_PixelFormat *fmt = surface->format;
     Uint8 sR, sG, sB, sA, cR, cG, cB, cA;
+    cA = 0;
     Uint32 pixel;
     Sint32 tmp2;
     int result = -1;
@@ -711,6 +713,7 @@ surface_fill_blend_rgba_mult(SDL_Surface *surface, SDL_Rect *rect,
     int n;
     SDL_PixelFormat *fmt = surface->format;
     Uint8 sR, sG, sB, sA, cR, cG, cB, cA;
+    cA = 0;
     Uint32 pixel;
     int result = -1;
 #if IS_SDLv1
@@ -787,6 +790,7 @@ surface_fill_blend_rgba_min(SDL_Surface *surface, SDL_Rect *rect, Uint32 color)
     int n;
     SDL_PixelFormat *fmt = surface->format;
     Uint8 sR, sG, sB, sA, cR, cG, cB, cA;
+    cA = 0;
     Uint32 pixel;
     int result = -1;
 #if IS_SDLv1
@@ -863,6 +867,7 @@ surface_fill_blend_rgba_max(SDL_Surface *surface, SDL_Rect *rect, Uint32 color)
     int n;
     SDL_PixelFormat *fmt = surface->format;
     Uint8 sR, sG, sB, sA, cR, cG, cB, cA;
+    cA = 0;
     Uint32 pixel;
     int result = -1;
 #if IS_SDLv1
