@@ -844,7 +844,9 @@ bitmask_threshold(bitmask_t *m, SDL_Surface *surf, SDL_Surface *surf2,
     Uint8 *pix;
     Uint8 r, g, b, a;
     Uint8 tr, tg, tb, ta;
+    b = 0;
     int bpp1, bpp2;
+    tb = 0;
 
     format = surf->format;
     rmask = format->Rmask;
