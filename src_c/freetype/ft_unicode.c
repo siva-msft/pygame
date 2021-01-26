@@ -116,6 +116,7 @@ _PGFT_EncodePyString(PyObject *obj, int ucs4)
          * of the object expanding each byte to 32 bits.
          */
         char *src;
+        src = (void*)0;
         Py_ssize_t i;
 
         Bytes_AsStringAndSize(obj, &src, &len);
