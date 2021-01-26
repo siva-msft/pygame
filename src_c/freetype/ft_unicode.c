@@ -115,7 +115,7 @@ _PGFT_EncodePyString(PyObject *obj, int ucs4)
          * UTF8 anyway?), so manually copy the raw contents
          * of the object expanding each byte to 32 bits.
          */
-        char *src;
+        char *src = (void*)0;
         Py_ssize_t i;
 
         Bytes_AsStringAndSize(obj, &src, &len);
